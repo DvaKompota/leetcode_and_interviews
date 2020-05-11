@@ -1,15 +1,11 @@
 class IntPalindromeFirstDraft:
 
-    def digit_length(self, number):
-        counter = 1
-        while number >= 10**counter:
-            counter += 1
-        return counter
-
     def is_palindrome(self, number=None):
         if number is None or number < 0:
             return False
-        length = self.digit_length(number)
+        length = 1
+        while number >= 10 ** length:
+            length += 1
         for i in range(1, length, 2):
             first_digit = number//10 ** (length - i)
             number = int(number - first_digit*10 ** (length - i))
