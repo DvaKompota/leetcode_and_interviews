@@ -15,27 +15,28 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
-class TwoSumFirstDraft:
+class TwoSum:
 
-    def two_sum_function(self, arr=None, target=None):
-        if arr is None or arr == [] or target is None:
-            return "Please provide a valid input"
+    def twoSumIndex(self, arr=None, target=None):
         for x in arr:
-            for y in arr:
-                if x + y == target:
-                    return [arr.index(x), arr.index(y)]
+            try:
+                y = arr.index(target - x, arr.index(x)+1)
+                if y == arr.index(x):
+                    pass
+                else:
+                    return [arr.index(x), y]
+            except:
+                pass
         return "There are no matching numbers"
 
 
-class TwoSum:
-
-    def two_sum_function(self, arr=None, target=None):
-        if arr is None or arr == [] or target is None:
-            return "Please provide a valid input"
-        for x in arr:
-            try:
-                y = arr.index(target - x)
-                return [arr.index(x), y]
-            except:
-                pass
+    def twoSum(self, nums: [int], target: int) -> [int]:
+        d = {}
+        for i in range(0, len(nums)):
+            d[nums[i]] = i
+        for i in range(0, len(nums)):
+            num1 = nums[i]
+            num2 = target - num1
+            if num2 in d and i != d[num2]:
+                return [i, d[num2]]
         return "There are no matching numbers"
