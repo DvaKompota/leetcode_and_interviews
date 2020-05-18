@@ -15,6 +15,7 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
+
 class TwoSum:
 
     def twoSumIndex(self, arr=None, target=None):
@@ -28,7 +29,6 @@ class TwoSum:
             except:
                 pass
         return "There are no matching numbers"
-
 
     def twoSum(self, nums: [int], target: int) -> [int]:
         d = {}
