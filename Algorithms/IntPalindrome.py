@@ -18,13 +18,13 @@ class IntPalindromeFirstDraft:
 
 class IntPalindrome:
 
-    def is_palindrome(self, number=None):
-        if number is None or number < 0:
+    def isPalindrome(self, x: int) -> bool:
+        if x is None or x < 0:
             return False
-        incoming_number = number
-        reversed_number = 0
-        while number > 0:
-            last_digit = number % 10
-            reversed_number = reversed_number*10 + last_digit
-            number = int(number/10)
-        return reversed_number == incoming_number
+        incoming_x = x
+        reversed_x = 0
+        while x > 0:
+            last_digit = x % 10
+            reversed_x = reversed_x*10 + last_digit
+            x = int(x/10)
+        return reversed_x == incoming_x
