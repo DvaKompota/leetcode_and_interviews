@@ -52,6 +52,14 @@ class CountPrimesTest(unittest.TestCase):
         actual_result = CountPrimes().countPrimes(3)
         self.assertEqual(actual_result, 1)
 
+    def testCountPrimes11(self):
+        actual_result = CountPrimes().countPrimes(11)
+        self.assertEqual(actual_result, 4)
+
+    def testCountPrimes12(self):
+        actual_result = CountPrimes().countPrimes(12)
+        self.assertEqual(actual_result, 5)
+
     def testCountPrimes100(self):
         actual_result = CountPrimes().countPrimes(100)
         self.assertEqual(actual_result, 25)
