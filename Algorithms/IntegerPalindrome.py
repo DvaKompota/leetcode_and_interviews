@@ -1,4 +1,4 @@
-class IntPalindromeFirstDraft:
+class IntegerPalindromeFirstDraft:
 
     def is_palindrome(self, number=None):
         if number is None or number < 0:
@@ -16,9 +16,9 @@ class IntPalindromeFirstDraft:
         return True
 
 
-class IntPalindrome:
+class IntegerPalindrome:
 
-    def isPalindrome(self, x: int) -> bool:
+    def is_palindrome(self, x: int) -> bool:
         if x is None or x < 0:
             return False
         incoming_x = x

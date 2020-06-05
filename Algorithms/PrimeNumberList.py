@@ -15,8 +15,8 @@
 # Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 
 
-class ListPrimes:
-    def listPrimes(self, n: int) -> [int]:
+class PrimeNumberList:
+    def prime_number_list(self, n: int) -> [int]:
         truth_table = n * [True]
         for i in range(2, int(n ** 0.5) + 1):
             for j in range(i * i, n, i):
