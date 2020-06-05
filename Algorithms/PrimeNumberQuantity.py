@@ -15,9 +15,9 @@
 # Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 
 
-class CountPrimesBruteForce:
+class PrimeNumberQuantityBruteForce:
 
-    def countPrimes(self, n: int) -> int:
+    def prime_number_quantity(self, n: int) -> int:
         answer = 0
         for number in range(1, n):
             counter = 0
@@ -29,9 +29,9 @@ class CountPrimesBruteForce:
         return answer
 
 
-class CountPrimes:
+class PrimeNumberQuantity:
 
-    def countPrimes(self, n: int) -> int:
+    def prime_number_quantity(self, n: int) -> int:
         answer = 0
         arr = []
         for i in range(0, n):
