@@ -6,10 +6,6 @@
 # 6. Write unit tests for your solution -- think about edge cases
 # 7. Runtime Complexity?
 # 8. Memory Complexity?
-#
-# Write a program that outputs the string representation of numbers from 1 to n.
-# But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”.
-# For numbers which are multiples of both three and five output “FizzBuzz”.
 
 
 class Sortings:
@@ -54,6 +50,6 @@ class Sortings:
                 nums[k] = i
                 k += 1
         return nums
-    # RUNTIME: 0(n)
-    # MEMORY: 0(n*max_value)
+    # RUNTIME: 0(n+max_value)
+    # MEMORY: 0(max_value)
 
