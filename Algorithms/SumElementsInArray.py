@@ -19,3 +19,5 @@ class SumElementsInArray:
         for item in arr:
             total += item
         return total
+    # RUNTIME: 0(n)
+    # MEMORY: 0(1)
