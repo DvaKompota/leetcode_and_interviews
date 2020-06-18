@@ -39,3 +39,7 @@ class MoveZeroesTest(unittest.TestCase):
         expected_array = [0, 0, 0]
         MoveZeroes().moveZeroes(given_array)
         self.assertEqual(given_array, expected_array)
+
+
+if __name__ == '__main__':
+    unittest.main()

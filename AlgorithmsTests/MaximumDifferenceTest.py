@@ -22,3 +22,6 @@ class MaximumDifferenceTest(unittest.TestCase):
         actual_result = MaximumDifference().maximum_difference(given_array)
         self.assertEqual(expected_result, actual_result)
 
+
+if __name__ == '__main__':
+    unittest.main()
