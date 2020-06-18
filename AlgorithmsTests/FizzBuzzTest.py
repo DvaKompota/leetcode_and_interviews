@@ -21,3 +21,6 @@ class FizzBuzzTest(unittest.TestCase):
         actual_result = FizzBuzz().fizzBuzz(-1)
         self.assertEqual(actual_result, 'Invalid input')
 
+
+if __name__ == '__main__':
+    unittest.main()

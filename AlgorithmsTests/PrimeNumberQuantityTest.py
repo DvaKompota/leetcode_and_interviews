@@ -64,3 +64,6 @@ class PrimeNumberQuantityTest(unittest.TestCase):
         actual_result = PrimeNumberQuantity().prime_number_quantity(100)
         self.assertEqual(actual_result, 25)
 
+
+if __name__ == '__main__':
+    unittest.main()

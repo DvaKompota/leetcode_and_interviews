@@ -15,3 +15,7 @@ class SumElementsInArrayTest(unittest.TestCase):
     def testSumElementsInNegativeArray(self):
         actual_result = SumElementsInArray().sum_elements([1, 2, -4])
         self.assertEqual(actual_result, -1)
+
+
+if __name__ == '__main__':
+    unittest.main()

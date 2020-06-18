@@ -39,3 +39,6 @@ class TwoSumTest(unittest.TestCase):
         actual_result = TwoSum().twoSum([2, 7, 11, 15], 19)
         self.assertEqual(actual_result, "There are no matching numbers")
 
+
+if __name__ == '__main__':
+    unittest.main()

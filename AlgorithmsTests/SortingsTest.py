@@ -63,3 +63,7 @@ class CountingSortTest(unittest.TestCase):
         expected_result = [0, 0, 1, 1, 2, 5]
         actual_result = Sortings().counting_sort(given_array)
         self.assertEqual(expected_result, actual_result)
+
+
+if __name__ == '__main__':
+    unittest.main()
