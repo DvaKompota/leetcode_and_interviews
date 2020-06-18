@@ -40,3 +40,5 @@ class TwoSum:
             if num2 in d and i != d[num2]:
                 return [i, d[num2]]
         return "There are no matching numbers"
+    # RUNTIME: 0(n)
+    # MEMORY: 0(1)
