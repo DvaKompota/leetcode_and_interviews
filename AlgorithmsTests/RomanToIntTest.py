@@ -21,3 +21,7 @@ class RomanToIntTest(unittest.TestCase):
         expected_result = 1994
         actual_result = RomanToInt().roman_to_int(given_string)
         self.assertEqual(expected_result, actual_result)
+
+
+if __name__ == '__main__':
+    unittest.main()

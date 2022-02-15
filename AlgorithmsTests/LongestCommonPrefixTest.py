@@ -15,3 +15,7 @@ class LongestCommonPrefixTest(unittest.TestCase):
         expected_result = ''
         actual_result = LongestCommonPrefix().longest_common_prefix(given_array)
         self.assertEqual(expected_result, actual_result)
+
+
+if __name__ == '__main__':
+    unittest.main()

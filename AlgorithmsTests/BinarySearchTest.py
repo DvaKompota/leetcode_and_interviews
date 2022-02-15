@@ -24,3 +24,7 @@ class BinarySearchTest(unittest.TestCase):
         expected_result = 0
         actual_result = BinarySearch().binary_search(given_array, given_target)
         self.assertEqual(expected_result, actual_result)
+
+
+if __name__ == '__main__':
+    unittest.main()
