@@ -2,7 +2,7 @@ import unittest
 from Algorithms.BasicRecursion import BasicRecursion
 
 
-class IterativefibonacciTest(unittest.TestCase):
+class IterativeFibonacciTest(unittest.TestCase):
 
     def testFibo9(self):
         given_number = 9
@@ -47,7 +47,7 @@ class IterativefibonacciTest(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
 
-class RecursivefibonacciTest(unittest.TestCase):
+class RecursiveFibonacciTest(unittest.TestCase):
 
     def testFibo9(self):
         given_number = 9
@@ -89,6 +89,51 @@ class RecursivefibonacciTest(unittest.TestCase):
         given_number = -1
         expected_result = "Invalid index in fibonacci sequence"
         actual_result = BasicRecursion().recursive_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+
+class MemoizationFibonacciTest(unittest.TestCase):
+
+    def testFibo9(self):
+        given_number = 9
+        expected_result = 34
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFibo100(self):
+        given_number = 100
+        expected_result = 354224848179261915075
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFibo3(self):
+        given_number = 3
+        expected_result = 2
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFibo2(self):
+        given_number = 2
+        expected_result = 1
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFibo1(self):
+        given_number = 1
+        expected_result = 1
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFibo0(self):
+        given_number = 0
+        expected_result = "Invalid index in fibonacci sequence"
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
+        self.assertEqual(expected_result, actual_result)
+
+    def testFiboMinusOne(self):
+        given_number = -1
+        expected_result = "Invalid index in fibonacci sequence"
+        actual_result = BasicRecursion().memoization_fibonacci(given_number)
         self.assertEqual(expected_result, actual_result)
 
 

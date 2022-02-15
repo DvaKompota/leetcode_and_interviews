@@ -30,9 +30,18 @@ class BasicRecursion:
             return "Invalid index in fibonacci sequence"
         if number == 1 or number == 2:
             return 1
-        fibo = self.recursive_fibonacci(number - 1) + self.recursive_fibonacci(number - 2)
-        return fibo
+        return self.recursive_fibonacci(number - 1) + self.recursive_fibonacci(number - 2)
     # RUNTIME: 0(2^n)
+    # MEMORY: 0(n)
+
+    def memoization_fibonacci(self, number: int, memo=None):
+        if number < 1:
+            return "Invalid index in fibonacci sequence"
+        memo = {1: 1, 2: 1} if not memo else memo
+        if number not in memo:
+            memo[number] = self.memoization_fibonacci(number - 1, memo) + self.memoization_fibonacci(number - 2, memo)
+        return memo[number]
+    # RUNTIME: 0(n)
     # MEMORY: 0(n)
 
     def factorial(self, number: int):
