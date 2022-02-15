@@ -151,5 +151,15 @@ class GoogleInterviewLuggageHandlingTest(unittest.TestCase):
         self.assertEqual(str(error.exception), 'Nothing to transport')
 
 
+class GoogleInterviewReplaceVarsInStringTest(unittest.TestCase):
+
+    def testGoogleInterviewReplaceVarsInString(self):
+        input_string = "/user/%USER%/home/%TMP%"
+        vars_dict = {"USER": "foo",	"TMP": "tmp"}
+        expected_result = "/user/foo/home/tmp"
+        actual_result = GoogleInterview().replace_vars_in_string(input_string, vars_dict)
+        self.assertEqual(expected_result, actual_result)
+
+
 if __name__ == '__main__':
     unittest.main()

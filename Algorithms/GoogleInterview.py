@@ -81,3 +81,39 @@ class GoogleInterview:
 		for container in plane[-1::-1]:
 			unloaded_luggage.extend(container)
 		return unloaded_luggage
+
+	"""
+	Write a tool which supports substitutions of string by string variables.
+	
+	Example 1:
+	“X” -> “123”
+	“Y” -> “456”
+	
+	“%X%_%Y%” should be resolved to “123_456”
+	
+	Example 2:
+	
+	USER = "foo"
+	TMP = "tmp"
+	HOME = "home123"
+	
+	Example Input : /user/%USER%/home/%TMP%
+	Example Output : /user/foo/home/tmp
+	"""
+
+	def replace_vars_in_string(self, input_string: str, vars_dict: dict) -> str:
+		left = 0
+		is_open = False
+		output_string = ""
+		for i, letter in enumerate(input_string):
+			if letter == "%" and not is_open:
+				left = i + 1
+				is_open = True
+			elif letter == "%" and is_open:
+				var_name = input_string[left:i]
+				left = 0
+				is_open = False
+				output_string += vars_dict[var_name]
+			elif not is_open:
+				output_string += letter
+		return output_string
