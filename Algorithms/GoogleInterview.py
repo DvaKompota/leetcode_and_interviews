@@ -13,8 +13,7 @@ class GoogleInterview:
 		Description : Pixel 5, 5G, Google-assistance
 		Price : 629.10
 	"""
-
-	def process_string(self, input_string: str):
+	def process_string(self, input_string: str) -> dict:
 		words = []
 		quotes_open = False
 		word_start = 0
@@ -33,3 +32,18 @@ class GoogleInterview:
 		words.append("") if len(words) != 4 else None
 		output = {"Company": words[0], "SKU": words[1], "Description": words[2], "Price": words[3], }
 		return output
+
+	"""
+	Write a function, that counts the shortest distance between 2 nodes of the graph
+	Distance between each pair of connected nodes is 1
+	
+	Input:
+		start: "A"
+		finish: "B"
+		connections : [("A", "C"), ("B", "C"), ]
+	
+	Output:
+		2
+	"""
+	def count_distance(self, start: str, finish: str, connections: [(), ]) -> int:
+		pass

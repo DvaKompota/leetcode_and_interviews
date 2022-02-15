@@ -95,5 +95,16 @@ class GoogleInterviewProcessStringTest(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
 
+class GoogleInterviewCountDistanceTest(unittest.TestCase):
+
+    def testGoogleInterviewCountDistance(self):
+        start = "A"
+        finish = "B"
+        connections = [("A", "C"), ("B", "C"), ]
+        expected_result = 2
+        actual_result = GoogleInterview().count_distance(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+
 if __name__ == '__main__':
     unittest.main()
