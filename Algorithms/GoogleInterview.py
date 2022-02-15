@@ -47,3 +47,37 @@ class GoogleInterview:
 	"""
 	def count_distance(self, start: str, finish: str, connections: [(), ]) -> int:
 		pass
+
+	"""
+	Write a function, that simulates the actions of luggage handling for a large aircraft, assuming:
+	Luggage is loaded into containers in the order the luggage arrives
+	When a container is full, or there is no more luggage, the container is loaded into the aircraft
+	The weight capacity of each container is 40 weight units
+	At the destination, containers are unloaded from the plane in LIFO order the last one in being the first out
+	Container contents are unloaded in FIFO order the last in being the last out
+	
+	Input: [10, 20, 15, 40, 25]
+	Output: [25, 40, 15, 10, 20]
+	"""
+	def luggage_handling(self, luggage_to_load: [int]) -> [int]:
+		if not luggage_to_load:
+			raise ValueError("Nothing to transport")
+		plane = [[], ]
+		unloaded_luggage = []
+		current_container_wieght = 0
+		container = 0
+		# loading
+		for item in luggage_to_load:
+			if item > 40:
+				raise ValueError("This is too big")
+			if current_container_wieght + item <= 40:
+				plane[container].append(item)
+				current_container_wieght += item
+			else:
+				container += 1
+				plane.append([item])
+				current_container_wieght = item
+		# unloading
+		for container in plane[-1::-1]:
+			unloaded_luggage.extend(container)
+		return unloaded_luggage
