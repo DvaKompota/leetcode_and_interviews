@@ -209,12 +209,40 @@ class GoogleInterviewLuggageHandlingTest(unittest.TestCase):
 
 class GoogleInterviewReplaceVarsInStringTest(unittest.TestCase):
 
-    def testGoogleInterviewReplaceVarsInString(self):
+    def testGoogleInterviewReplaceVarsInStringSameLength(self):
         input_string = "/user/%USER%/home/%TMP%"
-        vars_dict = {"USER": "foo",	"TMP": "tmp"}
-        expected_result = "/user/foo/home/tmp"
+        vars_dict = {"USER": "fooo", "TMP": "bar"}
+        expected_result = "/user/fooo/home/bar"
         actual_result = GoogleInterview().replace_vars_in_string(input_string, vars_dict)
         self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewReplaceVarsInStringLongerNames(self):
+        input_string = "/user/%USER%/home/%TMP%"
+        vars_dict = {"USER": "foobar", "TMP": "tmp_folder"}
+        expected_result = "/user/foobar/home/tmp_folder"
+        actual_result = GoogleInterview().replace_vars_in_string(input_string, vars_dict)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewReplaceVarsInStringShorterNames(self):
+        input_string = "/user/%USER%/home/%TMP%"
+        vars_dict = {"USER": "foo",	"TMP": "ba"}
+        expected_result = "/user/foo/home/ba"
+        actual_result = GoogleInterview().replace_vars_in_string(input_string, vars_dict)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewReplaceVarsInStringMixedLength(self):
+        input_string = "/user/%USER%/home/%TMP%"
+        vars_dict = {"USER": "foo", "TMP": "tmp_folder"}
+        expected_result = "/user/foo/home/tmp_folder"
+        actual_result = GoogleInterview().replace_vars_in_string(input_string, vars_dict)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewReplaceVarsInStringNoVariable(self):
+        input_string = "/user/%USER%/home/%TMP%"
+        vars_dict = {"USER": "foo"}
+        with self.assertRaises(Exception) as error:
+            GoogleInterview().replace_vars_in_string(input_string, vars_dict)
+        self.assertEqual(str(error.exception), 'No variable %TMP% is found')
 
 
 if __name__ == '__main__':

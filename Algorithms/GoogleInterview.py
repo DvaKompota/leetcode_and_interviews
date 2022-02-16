@@ -130,9 +130,12 @@ class GoogleInterview:
 				is_open = True
 			elif letter == "%" and is_open:
 				var_name = input_string[left:i]
-				left = 0
+				if var_name in vars_dict:
+					output_string += vars_dict[var_name]
+				else:
+					raise Exception(f"No variable %{var_name}% is found")
+				left = i + 1
 				is_open = False
-				output_string += vars_dict[var_name]
 			elif not is_open:
 				output_string += letter
 		return output_string
