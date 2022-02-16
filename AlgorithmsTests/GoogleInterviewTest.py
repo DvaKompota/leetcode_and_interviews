@@ -95,14 +95,70 @@ class GoogleInterviewProcessStringTest(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
 
-class GoogleInterviewCountDistanceTest(unittest.TestCase):
+class GoogleInterviewCountDistanceBFSTest(unittest.TestCase):
 
-    def testGoogleInterviewCountDistance(self):
+    def testGoogleInterviewCountDistanceBFS2(self):
         start = "A"
         finish = "B"
         connections = [("A", "C"), ("B", "C"), ]
         expected_result = 2
-        actual_result = GoogleInterview().count_distance(start, finish, connections)
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFSNo(self):
+        start = "A"
+        finish = "D"
+        connections = [("A", "C"), ("B", "C"), ]
+        expected_result = -1
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFS1(self):
+        start = "A"
+        finish = "C"
+        connections = [("A", "C"), ("B", "C"), ]
+        expected_result = 1
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFS0(self):
+        start = "A"
+        finish = "A"
+        connections = [("A", "C"), ("B", "C"), ]
+        expected_result = 0
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFS2D(self):
+        start = "A"
+        finish = "D"
+        connections = [("A", "C"), ("B", "C"), ("C", "D"), ]
+        expected_result = 2
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFS3(self):
+        start = "A"
+        finish = "E"
+        connections = [("A", "C"), ("B", "C"), ("C", "D"), ("E", "D"), ]
+        expected_result = 3
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFSLooped(self):
+        start = "A"
+        finish = "F"
+        connections = [("A", "C"), ("B", "C"), ("C", "D"), ("E", "D"), ("E", "B"), ("F", "E"), ]
+        expected_result = 4
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
+        self.assertEqual(expected_result, actual_result)
+
+    def testGoogleInterviewCountDistanceBFSLooped2Way(self):
+        start = "A"
+        finish = "G"
+        connections = [("A", "C"), ("B", "C"), ("C", "D"), ("E", "D"), ("E", "B"), ("F", "E"), ("F", "G"), ("G", "E"), ]
+        expected_result = 4
+        actual_result = GoogleInterview().count_distance_bfs(start, finish, connections)
         self.assertEqual(expected_result, actual_result)
 
 
