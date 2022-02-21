@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.RomanToInt import RomanToInt
+from Tasks.LeetcodeTasks.RomanToInt import RomanToInt
 
 
 class RomanToIntTest(unittest.TestCase):

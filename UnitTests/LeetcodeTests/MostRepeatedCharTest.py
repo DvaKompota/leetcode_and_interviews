@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.MostRepeatedChar import MostRepeatedChar
+from Tasks.LeetcodeTasks.MostRepeatedChar import MostRepeatedChar
 
 
 class MostRepeatedCharTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.MaximumDifference import MaximumDifference
+from Tasks.LeetcodeTasks.MaximumDifference import MaximumDifference
 
 
 class MaximumDifferenceTest(unittest.TestCase):

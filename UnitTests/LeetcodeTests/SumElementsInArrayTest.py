@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.SumElementsInArray import SumElementsInArray
+from Tasks.LeetcodeTasks.SumElementsInArray import SumElementsInArray
 
 
 class SumElementsInArrayTest(unittest.TestCase):

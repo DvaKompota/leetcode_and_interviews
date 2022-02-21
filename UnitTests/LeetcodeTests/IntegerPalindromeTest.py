@@ -1,6 +1,6 @@
 import unittest
-from Algorithms.IntegerPalindrome import IntegerPalindromeFirstDraft
-from Algorithms.IntegerPalindrome import IntegerPalindrome
+from Tasks.LeetcodeTasks.IntegerPalindrome import IntegerPalindromeFirstDraft
+from Tasks.LeetcodeTasks.IntegerPalindrome import IntegerPalindrome
 
 
 class IntegerPalindromeFirstDraftTest(unittest.TestCase):

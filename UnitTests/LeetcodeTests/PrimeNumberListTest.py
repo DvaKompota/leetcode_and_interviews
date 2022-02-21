@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.PrimeNumberList import PrimeNumberList
+from Tasks.LeetcodeTasks.PrimeNumberList import PrimeNumberList
 
 
 class PrimeNumberListTest(unittest.TestCase):

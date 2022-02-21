@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.GoogleInterview import GoogleInterview
+from Tasks.InterviewTasks.GoogleInterview import GoogleInterview
 
 
 class GoogleInterviewProcessStringTest(unittest.TestCase):

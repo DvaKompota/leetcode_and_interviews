@@ -1,6 +1,6 @@
 import unittest
-from Algorithms.PrimeNumberQuantity import PrimeNumberQuantityBruteForce
-from Algorithms.PrimeNumberQuantity import PrimeNumberQuantity
+from Tasks.LeetcodeTasks.PrimeNumberQuantity import PrimeNumberQuantityBruteForce
+from Tasks.LeetcodeTasks.PrimeNumberQuantity import PrimeNumberQuantity
 
 
 class PrimeNumberQuantityBruteForceTest(unittest.TestCase):

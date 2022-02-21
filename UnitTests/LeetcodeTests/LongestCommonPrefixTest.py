@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.LongestCommonPrefix import LongestCommonPrefix
+from Tasks.LeetcodeTasks.LongestCommonPrefix import LongestCommonPrefix
 
 
 class LongestCommonPrefixTest(unittest.TestCase):

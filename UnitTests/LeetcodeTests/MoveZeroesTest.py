@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.MoveZeroes import MoveZeroes
+from Tasks.LeetcodeTasks.MoveZeroes import MoveZeroes
 
 
 class MoveZeroesTest(unittest.TestCase):

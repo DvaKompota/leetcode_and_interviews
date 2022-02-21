@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.BasicRecursion import BasicRecursion
+from Tasks.LeetcodeTasks.BasicRecursion import BasicRecursion
 
 
 class IterativeFibonacciTest(unittest.TestCase):

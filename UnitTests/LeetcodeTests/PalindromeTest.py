@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.Palindrome import Palindrome
+from Tasks.LeetcodeTasks.Palindrome import Palindrome
 
 
 class PalindromeTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.SortArrayOfZeroOnes import SortArrayOfZeroOnes
+from Tasks.LeetcodeTasks.SortArrayOfZeroOnes import SortArrayOfZeroOnes
 
 
 class SortArrayOfZeroOnesTest(unittest.TestCase):

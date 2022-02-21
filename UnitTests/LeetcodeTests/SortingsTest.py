@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.Sortings import Sortings
+from Tasks.LeetcodeTasks.Sortings import Sortings
 
 
 class BubbleSortTest(unittest.TestCase):

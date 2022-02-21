@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.TwoSum import TwoSum
+from Tasks.LeetcodeTasks.TwoSum import TwoSum
 
 
 class TwoSumIndexTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from Algorithms.FizzBuzz import FizzBuzz
+from Tasks.LeetcodeTasks.FizzBuzz import FizzBuzz
 
 
 class FizzBuzzTest(unittest.TestCase):
