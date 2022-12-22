@@ -12,10 +12,9 @@ class FileSystem(object):
     mkdir /foo/baz/bar => error (no /foo/baz directory found)
     """
 
-    class Directory(object):
+    class Directory:
 
         def __init__(self, name):
-            super().__init__()
             self.name = name
             self.sub_dirs = {}
 
