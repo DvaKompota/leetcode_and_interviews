@@ -1,5 +1,5 @@
 import unittest
-from Tasks.InterviewTasks.TeslaInterview2 import CodilityTasks
+from Tasks.InterviewTasks.TeslaInterview2 import CodilityTasks, FirstInterviewTask
 
 
 class TeslaInterviewCodilityTasksFirstMissingIntegerTest(unittest.TestCase):
@@ -220,6 +220,45 @@ class TeslaInterviewCodilityTasksSquareFromWoodenSticks(unittest.TestCase):
         second_stick = 333_333_333
         expected_result = 333_333_332
         actual_result = CodilityTasks().square_from_wooden_sticks(first_stick, second_stick)
+        self.assertEqual(expected_result, actual_result)
+
+
+class TeslaInterviewFirstInterviewTaskSecondLowestNumber(unittest.TestCase):
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_1(self):
+        given_array = [2, 1]
+        expected_result = 2
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
+        self.assertEqual(expected_result, actual_result)
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_2(self):
+        given_array = [1, 2]
+        expected_result = 2
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
+        self.assertEqual(expected_result, actual_result)
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_3(self):
+        given_array = [0, 0]
+        expected_result = 0
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
+        self.assertEqual(expected_result, actual_result)
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_4(self):
+        given_array = [21, 1, 2, 5, 8]
+        expected_result = 2
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
+        self.assertEqual(expected_result, actual_result)
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_5(self):
+        given_array = [2, 3, -4, 54, 0, 5]
+        expected_result = 0
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
+        self.assertEqual(expected_result, actual_result)
+
+    def testTeslaInterviewFirstInterviewTaskSecondLowestNumber_6(self):
+        given_array = [2, 3, -4, 54, 0, -5]
+        expected_result = -4
+        actual_result = FirstInterviewTask().second_lowest_number(given_array)
         self.assertEqual(expected_result, actual_result)
 
 

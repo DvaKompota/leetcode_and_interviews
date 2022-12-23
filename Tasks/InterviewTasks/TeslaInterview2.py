@@ -136,3 +136,28 @@ class CodilityTasks:
         if second_stick >= first_stick // 3:
             answer = max(answer, first_stick // 3)
         return answer
+
+
+class FirstInterviewTask:
+
+    def second_lowest_number(self, arr: [int]):
+        """
+        Given an array A of N integers, return the second-smallest integer in A.
+
+        For example:
+            Given A = [21, 1, 2, 5, 8], the function should return 2.
+            Given A = [2, 3, -4, 54, 0, -5], the function should return -4.
+            Given A = [1, 2], the function should return 2.
+
+        Write an efficient algorithm for the following assumptions:
+            N is an integer within the range [1..100,000];
+            each element of array A is an integer within the range [−1,000,000..1,000,000].
+        """
+        lowest_number = second_lowest_number = 1_000_001
+        for num in arr:
+            if num < lowest_number:
+                second_lowest_number = lowest_number
+                lowest_number = num
+            elif num < second_lowest_number:
+                second_lowest_number = num
+        return second_lowest_number
