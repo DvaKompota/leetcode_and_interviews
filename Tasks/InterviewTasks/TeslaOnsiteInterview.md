@@ -70,3 +70,38 @@ I've been doing that as my daily/weekly/bi-weekly/monthly routine for the last 4
 ### Help identify software bugs through manual testing, automated scripting, and report investigation.
 I've been doing that as my daily/weekly/bi-weekly/monthly routine for the last 4 years: both manually and through test automation.<br>
 <br>
+
+
+
+# Tell me about the hardest engineering problem you solved 
+
+I can name 3 — all of them were pretty complicated for me at the time, but for different reasons:
+
+### Building my first test automation framework using Robot Framework at AppZen
+I was only 3 months into profession of a manual QA with 0 automation experience<br>
+I needed to build a full-fetched FE test automation framework from scratch<br>
+The framework was to have ~100 automated functional test cases that I was executing manually at the time<br>
+This was in addition to manual validation of every new feature and every bi-weekly release coming to the app.<br>
+I had only 3 months to complete the task.<br>
+<br>
+I finished 2.5 weeks early. The framework had less than 5% of flakiness (compared to ~15% my peers had),<br>
+and finished 100+ FE tests in under 30 minutes (compared to ~4.5 hours for ~150 tests my peers had).<br>
+<br>
+
+### Building FETA Framework library to unify 3 separate Pytest frameworks at BlueOwl
+It was a big refactoring project with lots of legacy code (mostly not clean) with little to no documentation.<br>
+The project was performed jointly by 3 different SDETs (including me), which I never did before that.<br>
+Almost every refactored function was slightly different in those 3 frameworks — we needed to satisfy all their use cases.<br>
+All the new code was to be written in a very clean code manner (which I was not familiar at the time) and very documented per PEP-8.<br>
+The entire library was to have 100% code coverage by unit tests, with heavy use of mocks (which I never heard of before that).<br>
+The end result was to satisfy 5 different SDETs that used those 3 frameworks to test 3 very different applications.<br>
+<br>
+It did.<br>
+<br>
+
+### Building an integration of FETA Framework with TestRail reporting portal at BlueOwl
+It was my solo task to build this integration from scratch to a turn-key solution that would fit all 3 Pytest frameworks (and liked by 5 SDETs).<br>
+The only things I had available were PyTest documentation and TestRail public APIs — everything else I had to figure out myself.<br>
+<br>
+The solution I built was reporting tests live as they were executed (not at the end of the whole run), having logs and screenshots attached.<br>
+It worked both with local and cloud-based test runs, supported our complicated tag system, and made beautiful reports, very easy to triage.<br>
