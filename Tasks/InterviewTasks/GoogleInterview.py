@@ -46,6 +46,8 @@ class GoogleInterview:
 		Output:
 			2
 		"""
+		if start == finish:
+			return 0
 		nods = {}
 		for connection in connections:
 			if connection[0] not in nods:
@@ -57,15 +59,15 @@ class GoogleInterview:
 			else:
 				nods[connection[1]].append(connection[0])
 		queue = [start]
-		visited = {start: 0}
+		distance = {start: 0}
 		while queue:
 			current_nod = queue.pop(0)
-			if current_nod == finish:
-				return visited[finish]
 			for child in nods[current_nod]:
-				if child not in queue and child not in visited:
+				if child == finish:
+					return distance[current_nod] + 1
+				if child not in queue and child not in distance:
 					queue.append(child)
-					visited[child] = visited[current_nod] + 1
+					distance[child] = distance[current_nod] + 1
 		return -1
 
 	def luggage_handling(self, luggage_to_load: [int]) -> [int]:

@@ -26,10 +26,10 @@ def two_number_sum(array: [int], target_sum: int) -> [int]:
 
     :return:            [int] - an array of two integers that sum to the target sum
     """
-    d = []
+    d = set()
     for i, num in enumerate(array):
         if target_sum - num in d:
             return [target_sum - num, num]
         else:
-            d.append(num)
+            d.add(num)
     return []
