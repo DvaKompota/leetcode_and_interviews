@@ -4,7 +4,7 @@ import re
 class CodilityTasks:
 
     # demo task
-    def first_missing_positive(self, nums: [int]) -> int:
+    def first_missing_positive(self, nums: list[int]) -> int:
         """
         Given an array of integers, find the first missing positive integer.
         In other words, find the lowest positive integer that does not exist in the array.
@@ -59,7 +59,7 @@ class CodilityTasks:
 
     # Tesla Online Coding Assessment – https://app.codility.com/public-link/Tesla-Qa-Automation---Sr-CR--2-2021-1/
     # task1
-    def array_of_unique_integers_with_zero_sum(self, n: int) -> [int]:
+    def array_of_unique_integers_with_zero_sum(self, n: int) -> list[int]:
         """
         Return an array with length equal to n, that consists of unique integers with zero-sum.
 
@@ -76,7 +76,7 @@ class CodilityTasks:
         return solution
 
     # task2
-    def get_success_rate(self, tests: [str], results: [str]) -> int:
+    def get_success_rate(self, tests: list[str], results: list[str]) -> int:
         """
         Return the success rate of the tests, given 2 arrays of strings, containing tests names and their results.
 
